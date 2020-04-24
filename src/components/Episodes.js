@@ -1,14 +1,15 @@
-import React from 'react';
-import parse from 'html-react-parser';
+import React from "react";
+import parse from "html-react-parser";
 
 export default function Episodes(props) {
   return (
     <div className="episodes">
-      {props.episodes.map(e => (
+      {props.episodes.map((e) => (
         <div className="episode" key={e.id}>
           {e.image && (
             <img className="episode-image" src={e.image.medium} alt={e.name} />
           )}
+          {/* the image doesnt fail the test when I delete it */}
           <div className="episode-info">
             <p className="episode-number">
               Season {e.season}, Episode {e.number}
